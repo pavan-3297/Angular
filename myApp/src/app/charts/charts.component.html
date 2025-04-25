@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Bar and Pie Charts</h2>
+  
+    <!-- Bar Chart -->
+    <div class="chart-container mb-4">
+      <canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        chartType="bar">
+      </canvas>
+    </div>
+  
+    <!-- Pie Chart -->
+    <div class="chart-container">
+      <canvas baseChart
+        [data]="pieChartData"
+        [options]="pieChartOptions"
+        chartType="pie">
+      </canvas>
+    </div>
+  </div>
+  

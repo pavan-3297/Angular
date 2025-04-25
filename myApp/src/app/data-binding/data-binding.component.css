@@ -1,0 +1,20 @@
+.container {
+  max-width: 900px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 8px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+button {
+  border-radius: 5px;
+}

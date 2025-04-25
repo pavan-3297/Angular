@@ -1,0 +1,46 @@
+<div class="container mt-5 p-4 bg-light shadow rounded">
+  <h2 class="text-center text-primary mb-4">🔗 Angular Data Binding</h2>
+
+  <div class="row g-4">
+    <!-- Interpolation -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <label class="form-label fw-bold">Name (Interpolation)</label>
+        <div class="form-control bg-white">{{ name }}</div>
+      </div>
+    </div>
+
+    <!-- Property Binding -->
+    <div class="col-md-6 text-center">
+      <div class="card shadow-sm p-3">
+        <label class="form-label fw-bold d-block">Image (Property Binding)</label>
+        <img [src]="imagePath" alt="Angular Logo" class="img-fluid rounded shadow-sm" />
+      </div>
+    </div>
+
+  
+    <!-- Two-way Binding -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <label class="form-label fw-bold">Two-way Binding (ngModel)</label>
+        <input [(ngModel)]="name" class="form-control" placeholder="Enter Name" />
+        <p class="text-info mt-2">Updated Name: {{ name }}</p>
+      </div>
+    </div>
+
+    <!-- One-way Binding + Manual Update -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <label class="form-label fw-bold">One-way Binding (Manual Update)</label>
+        <input class="form-control" (input)="updateEmail($event)" placeholder="Enter Email" />
+        <p class="text-secondary mt-2">Email: {{ email }}</p>
+        <div *ngIf="email && !isEmailValid()" class="text-danger">
+          Invalid email format.
+        </div>
+        <div *ngIf="isEmailValid() && email" class="text-success">
+          Valid email format.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

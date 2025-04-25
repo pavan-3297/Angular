@@ -1,0 +1,29 @@
+/* Optional: Add custom style for active link */
+.nav-link.active {
+    color: #fff;
+    background-color: #007bff; /* Highlighted active tab */
+    border-radius: 5px;
+  }
+  
+  /* Optional: Customizing Navbar Brand */
+  .navbar-brand {
+    font-size: 1.5rem; 
+    font-weight: bold;
+  }
+  
+  /* Navbar links customization */
+  .nav-link {
+    color: #555 !important; /* Default color for links */
+  }
+  
+  .nav-link:hover {
+    color: #007bff !important; /* Hover color */
+  }
+  
+  /* For smaller screens, the navbar brand and links should look good */
+  @media (max-width: 767px) {
+    .navbar-collapse {
+      background-color: #f8f9fa;
+    }
+  }
+  
